@@ -7,6 +7,7 @@
     main {
         flex-direction: column;
         padding: 0;
+        border-radius: 0;
     }
     #form-container {
         margin-right: 0;
