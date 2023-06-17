@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>newsletter</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-mobile.css">
+</head>
+<body>
+  <main>
+      <img id="hero-mobile" src="./assets/images/illustration-sign-up-mobile.svg" alt="hero mobile">
+      <div id="form-container">
+        <form  onsubmit="onSubmit(event)">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li><i><img src="./assets/images/icon-list.svg" alt="list icon"></i>Product discovery and building what matters</li>
+            <li><i><img src="./assets/images/icon-list.svg" alt="list icon"></i>Measuring to ensure updates are a success</li>
+            <li><i><img src="./assets/images/icon-list.svg" alt="list icon"></i>And much more!</li>
+          </ul>
+          <label for="email"><p>Email address</p><p class="invisible" id="error-message">Valid email required</p></label>
+          <input 
+            type="text" 
+            id="email-input" 
+            name="email" 
+            autocomplete="off"
+            placeholder="email@company.com">
+          <button type="submit">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+      <img id="hero-desktop" src="./assets/images/illustration-sign-up-desktop.svg" alt="hero">
+  </main>
+  <div id="success-backdrop" class="invisible"></div>
+  <div class="invisible" id="success-card">
+    <img src="assets/images/icon-success.svg" alt="success-icon">
+    <h1>Thanks for subscribing!</h1>
+    <p>A confirmation email has been sent to <strong id="success-email"></strong>. Please open it and click the button inside to confirm your subscription.</p>
+    <button id="dismiss-button" onclick="closeSuccess()">Dismiss message</button>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

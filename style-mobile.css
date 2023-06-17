@@ -1,0 +1,45 @@
+@media screen and (min-width: 450px) {
+    body {
+        height: 100vh;
+    }
+}
+@media screen and (max-width: 450px) {
+    main {
+        flex-direction: column;
+        padding: 0;
+    }
+    #form-container {
+        margin-right: 0;
+        padding: 0 1ch;
+    }
+
+    form {
+        margin-top: 2ch;
+    }
+
+    h1 {
+        font-size: 3.2rem;
+    }
+    #hero-desktop {
+        display: none;
+    }
+
+    #hero-mobile {
+        display: block;
+        width: 100vw;
+    }
+    #success-card {
+        transition: none;
+        position: fixed;
+        margin: auto;
+        width: 100%;
+    }
+
+    #success-backdrop {
+        background-color: white;
+    }
+    
+    #success-card.invisible {
+        transform: translateY(10vh);
+    }
+}
